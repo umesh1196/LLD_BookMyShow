@@ -1,10 +1,11 @@
 package com.example.demo.models;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.List;
 
@@ -18,7 +19,4 @@ public class Auditorium extends BaseModel{
     @ElementCollection
     @Enumerated
     private List<Feature> typesSupported;
-
-
-
 }

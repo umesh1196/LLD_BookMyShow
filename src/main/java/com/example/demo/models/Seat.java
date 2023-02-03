@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,11 +18,11 @@ public class Seat extends BaseModel{
     private int columnNo;
 
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private SeatStatus seatStatus;
 
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private SeatType seatType;
 
 }

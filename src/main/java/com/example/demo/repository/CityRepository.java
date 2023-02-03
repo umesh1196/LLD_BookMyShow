@@ -12,4 +12,6 @@ public interface CityRepository extends JpaRepository<City,Long> {
     City save(City city);
 
     List<City> findAll();
+
+    City getCityByNameOfCity(String cityName);
 }

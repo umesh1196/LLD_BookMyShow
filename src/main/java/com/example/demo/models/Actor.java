@@ -1,9 +1,7 @@
 package com.example.demo.models;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +18,6 @@ public class Actor extends BaseModel{
     private List<Movie> moviesActedIn;
 
     @ElementCollection
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private List<Feature> movieFetaures;
 }

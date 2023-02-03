@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import lombok.Getter;
@@ -17,7 +18,7 @@ public class MovieShowSeatBookings extends BaseModel{
     @ManyToOne
     private Seat seat;
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private MovieShowSeatStatus movieShowSeatStatus;
 
 }

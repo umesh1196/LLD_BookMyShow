@@ -1,9 +1,7 @@
 package com.example.demo.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +22,7 @@ public class Ticket extends BaseModel{
     @OneToMany(mappedBy = "ticket")
     private List<Payment> payements;
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private TicketStatus ticketStatus;
 
     private double totalAmount;
