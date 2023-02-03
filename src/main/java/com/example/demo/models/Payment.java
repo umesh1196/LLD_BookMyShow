@@ -1,6 +1,7 @@
 package com.example.demo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import lombok.Getter;
@@ -13,10 +14,10 @@ import java.sql.Time;
 @Setter
 public class Payment extends BaseModel{
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private PaymentMode paymentMode;
 
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private PaymentStatus paymentStatus;
 
     private String transactionId;

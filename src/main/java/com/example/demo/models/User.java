@@ -1,6 +1,8 @@
 package com.example.demo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,5 +21,6 @@ public class User extends BaseModel{
 
     private String password;
 
+    @Enumerated(value = EnumType.STRING)
     private UserType userType;
 }

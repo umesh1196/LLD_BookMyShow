@@ -16,7 +16,7 @@ public class Movie extends BaseModel{
     private List<Actor> actors;
 
     @ElementCollection
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private List<Genre> genreList;
 
 

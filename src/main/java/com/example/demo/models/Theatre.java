@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -17,7 +18,7 @@ public class Theatre extends BaseModel{
 
     private String address;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Auditorium> auditoriumList;
 
     @OneToOne
